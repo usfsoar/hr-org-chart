@@ -17,6 +17,15 @@
   background-color: var(--primary-color-lighter);
 }
 
+.orgChart-node a {
+  color: white;
+  text-decoration: none;
+}
+
+.orgChart-node a:hover {
+  text-decoration: underline;
+}
+
 .orgChart-node-flex {
   display: flex;
   flex-direction: column;
@@ -32,4 +41,24 @@
   text-transform: uppercase;
   font-size: 10px;
   font-weight: bold;
+}
+
+.orgChart-node-open {
+  font-style: italic;
+  font-size: 10px;
+}
+
+.orgChart-node-position {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.orgChart-node-heldBy {
+  font-weight: bold;
+}
+
+.orgChart-node-spaceFiller {
+  height: 2em;
 }

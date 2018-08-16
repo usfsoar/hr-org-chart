@@ -11,6 +11,7 @@ const COL_INDICES = {
   COMMENTS: 7
 };
 const CONTAINER_ID = 'orgChartContainer';
+const ACCEPTING_APPLICATIONS_URL = 'http://usfsoar.com/positions';
 
 google.charts.load('current', {packages: ['orgchart']});
 google.charts.setOnLoadCallback(loadData);
@@ -40,7 +41,8 @@ function handleDataResponse(response) {
                       <span class="orgChart-node-team">${positionTeam}</span>
                       <span class="orgChart-node-position">${positionName}</span>
                       ${positionHeldBy ? `<span class="orgChart-node-heldBy">${positionHeldBy}</span>` : ''}
-                      ${positionOpen ? `<span class="orgChart-node-open">Accepting Applications</span>` : ''}
+                      ${positionOpen ? `<span class="orgChart-node-open"><a href="${ACCEPTING_APPLICATIONS_URL}">Open - Apply Now!</a></span>` : ''}
+                      ${!positionHeldBy && !positionOpen ? `<span class="orgChart-node-spaceFiller"> </span>` : ``}
                      </div>`;
     data.setCell(row, newColumnIndex, data.getValue(row, COL_INDICES.UNIQUE_NAME), formatted);
   }
