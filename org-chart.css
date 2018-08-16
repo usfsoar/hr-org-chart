@@ -2,12 +2,23 @@
   --primary-color: #006747;
   --primary-color-lighter: #009374;
   --secondary-color: #CFC493;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin: 16px;
+}
+
+.note {
+  max-width: 500px;
+  margin: 16px;
 }
 
 .orgChart-node {
   background-color: var(--primary-color);
   color: white;
-  font-family: "Open Sans", sans-serif;
   min-width: 100px;
   border-radius: 3px;
   height: 100%;
