@@ -1,0 +1,23 @@
+{
+  "name": "soar-hr-org-chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "orgChart.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usfsoar/hr-org-chart.git"
+  },
+  "author": "Ian Sanders <iansanders@mail.usf.edu>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/usfsoar/hr-org-chart/issues"
+  },
+  "homepage": "https://github.com/usfsoar/hr-org-chart#readme",
+  "devDependencies": {
+    "@types/google.visualization": "0.0.43"
+  }
+}
