@@ -1,3 +1,17 @@
 {
-    "extends": "google"
+  "extends": "google",
+  "parserOptions": {
+      "ecmaVersion": 6
+  },
+  "env": {
+      "browser": true
+  },
+  "rules": {
+      "linebreak-style": [
+          "error",
+          "windows"
+      ],
+      "no-unused-vars": "off",
+      "arrow-parens": "off"
+  }
 }
