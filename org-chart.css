@@ -28,14 +28,29 @@ h1 {
 
 .filterButton {
   padding: 8px;
-  border-radius: 2px;
   border: none;
   margin: 4px;
   background-color: var(--secondary-color);
   transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  outline: 1px solid white;
+  --border-radius: 5px;
 }
 
-.filterButton:hover {
+.filterButton:not(:first-of-type) {
+  margin-left: -8px;
+}
+
+.filterButton:first-of-type {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.filterButton:last-of-type {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.filterButton:hover, .filterButton:not(.filterButton--active):focus {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -43,6 +58,7 @@ h1 {
 .filterButton.filterButton--active {
   background-color: var(--primary-color);
   color: white;
+  outline: none;
 }
 
 .orgChart-node {
