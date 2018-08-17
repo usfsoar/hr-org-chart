@@ -22,14 +22,17 @@ h1 {
   margin: 16px;
 }
 
+.filters h2 {
+  margin-bottom: 0;
+}
+
 .filterButton {
   padding: 8px;
   border-radius: 2px;
   border: none;
   margin: 4px;
   background-color: var(--secondary-color);
-  font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, opacity 0.2s ease;
 }
 
 .filterButton:hover {
