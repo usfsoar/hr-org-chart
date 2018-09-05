@@ -84,6 +84,7 @@ function initOrgChart(unfilteredData) {
   const orgChart = new google.visualization.OrgChart(container);
 
   drawOrgChart(orgChart, unfilteredData);
+  applyLinkedFilterIfPresent(orgChart, unfilteredData);
   initFilterButtons(orgChart, unfilteredData);
 }
 
@@ -99,6 +100,33 @@ function drawOrgChart(chart, data) {
     nodeClass: 'orgChart-node',
     selectedNodeClass: 'orgChart-node--selected',
   });
+}
+
+/**
+ * Detect if the url contains a filter, and if so, apply that filter. Allows for
+ * linking directly to filtered org charts.
+ * @param {google.visualization.OrgChart} chart The chart object.
+ * @param {google.visualization.DataView} unfilteredData The chart's
+ * unfiltered data view.
+ */
+function applyLinkedFilterIfPresent(chart, unfilteredData) {
+  let hash = window.location.hash;
+  if (hash) {
+    let filter = hash.substr(1).replace('+', ' '); // Remove '#', replace spaces
+    console.log(filter);
+
+    /** All allowed filter strings, pulled from the filter buttons. */
+    let filters = [...document.querySelectorAll('.filterButton')]
+        .map(button => button.dataset.filter);
+
+    if (filters.indexOf(filter) !== -1) {
+      // Is a valid filter string
+      filterChartData(chart, unfilteredData, filter);
+      clearFilterButtonsActiveClass();
+      document.querySelectorAll(`.filterButton[data-filter='${filter}']`)
+          .forEach(button => button.classList.add('filterButton--active'));
+    }
+  }
 }
 
 /**
@@ -138,6 +166,7 @@ function initFilterButtons(chart, unfilteredData) {
       filterChartData(chart, unfilteredData, filter);
       clearFilterButtonsActiveClass();
       filterButton.classList.add('filterButton--active');
+      window.location.hash = filter.replace(' ', '+'); // For linking
     });
   });
 }
