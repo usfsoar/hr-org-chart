@@ -6,6 +6,10 @@ This is a slightly more complex, modifed version of the basic [Google Organizati
 
 ## Contributing
 
-To contribute, simply clone, edit, and submit a pull request. NPM is not required, it's just used to download the Google Visualization TypeScript files and eslint configurations, which work with Visual Studio and Visual Studio Code to provide suggestions and code linting.
+To contribute, simply clone, edit, and submit a pull request. When you push to your fork, you can actually view the latest changes live at https://{YOUR_USERNAME}.github.io/hr-org-chart/. You can also view the changes live with VSCode's [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+See the issues for specific items to work on. Feel free to submit your own ideas.
+
+NPM is not required, it's just used to download the Google Visualization TypeScript files and eslint configurations, which work with Visual Studio and Visual Studio Code to provide suggestions and code linting.
 
 If you do want to download those development libraries, simply install Node.js and run `npm update` in the folder.
