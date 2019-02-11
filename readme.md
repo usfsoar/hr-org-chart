@@ -10,6 +10,6 @@ To contribute, simply clone, edit, and submit a pull request. When you push to y
 
 See the issues for specific items to work on. Feel free to submit your own ideas.
 
-NPM is not required, it's just used to download the Google Visualization TypeScript files and eslint configurations, which work with Visual Studio and Visual Studio Code to provide suggestions and code linting.
+NPM is not required, it's just used to download some configuration files for Visual Studio Code that provide formatting and hints. They make development a bit easier.
 
 If you do want to download those development libraries, simply install Node.js and run `npm update` in the folder.
