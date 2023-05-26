@@ -1,5 +1,5 @@
 /** Location of SOAR's Position Database on Google Sheets. */
-const POSITION_DB_URL = 'https://docs.google.com/spreadsheets/d/1ugs5aryRt4Xii2kVJ6OUF4edFRDFaesFtmJ6yTLr6tc/gviz/tq?gid=Positions&headers=1';
+const POSITION_DB_URL = 'https://docs.google.com/spreadsheets/d/16K7XM1Q1_Ps4sU1KsbU2xdkuY-7JjMlh9wt5wEAcPS4/gviz/tq?gid=Positions&headers=1';
 /** Indexes of columns in the positions sheet. */
 const COL_INDICES = {
   TEAM: 0,
